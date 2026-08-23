@@ -259,6 +259,7 @@ describe('main bootstrap', () => {
     await Promise.resolve();
 
     expect(bootstrap.browserWindow).toHaveBeenNthCalledWith(1, expect.objectContaining({
+      backgroundColor: '#000000',
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
@@ -268,6 +269,7 @@ describe('main bootstrap', () => {
     expect(bootstrap.browserWindow).toHaveBeenNthCalledWith(2, expect.objectContaining({
       title: 'Sidra',
       show: false,
+      icon: 'assets/music_icon_DEFAULTMODE.png',
       webPreferences: expect.objectContaining({
         partition: 'persist:sidra',
         nodeIntegration: false,

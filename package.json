@@ -55,11 +55,13 @@
       "assets/authFrameFix.js",
       "assets/authStyleFix.css",
       "assets/sidra-logo.png",
+      "assets/music_icon_DEFAULTMODE.svg",
+      "assets/music_icon_DEFAULTMODE.png",
       "assets/splash.html",
       "assets/styleFix.css",
       "assets/windowChrome.css"
     ],
-    "icon": "build/icon.png",
+    "icon": "assets/music_icon_DEFAULTMODE.png",
     "files": [
       "dist/**/*",
       "assets/**/*",

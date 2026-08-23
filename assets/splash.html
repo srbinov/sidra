@@ -7,31 +7,51 @@
 <title>Loading</title>
 <link rel="stylesheet" href="windowChrome.css">
 <style>
+html, body {
+  background: #000000;
+}
 .icon {
-  margin-bottom: 24px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 18px;
+}
+.wordmark {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.021em;
+  margin-bottom: 32px;
 }
 .spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid rgba(218, 165, 32, 0.2);
-  border-top-color: #daa520;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(252, 60, 68, 0.18);
+  border-top-color: #fc3c44;
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  margin-bottom: 16px;
+  animation: spin 0.75s linear infinite;
+  margin-bottom: 14px;
 }
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 .loading-text {
-  color: rgba(218, 165, 32, 0.7);
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  color: #a1a1a6;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+    border-color: #fc3c44;
+    border-top-color: transparent;
+  }
 }
 </style>
 </head>
 <body>
-<img class="icon" src="sidra-logo.png" alt="" width="128" height="128">
-<div class="spinner"></div>
+<img class="icon" src="music_icon_DEFAULTMODE.svg" alt="" width="120" height="120">
+<div class="wordmark">Apple Music</div>
+<div class="spinner" aria-hidden="true"></div>
 <span class="loading-text">Loading...</span>
 <script>
 (function() {

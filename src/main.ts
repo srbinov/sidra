@@ -34,8 +34,8 @@ const CONTENT_READY_POLL_MS = 100;
 const CONTENT_READY_TIMEOUT_MS = 3500;
 const CSS_READY_TIMEOUT_MS = 10000;
 const UPDATE_CHECK_DELAY_MS = 5000;
-const SPLASH_WIDTH_PX = 300;
-const SPLASH_HEIGHT_PX = 350;
+const SPLASH_WIDTH_PX = 320;
+const SPLASH_HEIGHT_PX = 380;
 const MAIN_WINDOW_WIDTH_PX = 1280;
 const MAIN_WINDOW_HEIGHT_PX = 800;
 
@@ -174,7 +174,7 @@ function createSplash(): { splash: BrowserWindow; minDisplay: Promise<void>; css
     fullscreen: false,
     center: true,
     skipTaskbar: true,
-    backgroundColor: '#1a0a10',
+    backgroundColor: '#000000',
     show: false,
     webPreferences: {
       contextIsolation: true,
@@ -319,6 +319,7 @@ function createMainWindow(ses: Electron.Session): { win: BrowserWindow; winReady
     show: false,
     autoHideMenuBar: true,
     backgroundColor: '#000000',
+    icon: getAssetPath('assets', 'music_icon_DEFAULTMODE.png'),
     webPreferences: {
       partition: 'persist:sidra',
       preload: path.join(__dirname, 'preload.js'),
